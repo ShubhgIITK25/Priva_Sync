@@ -316,26 +316,7 @@ export default function LandingEditorPage() {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col text-slate-900 font-sans">
 
-      {/*Header*/}
-      <header className="h-16 border-b border-slate-200 bg-white flex items-center px-6 shrink-0 gap-6 z-20">
-        <div className="flex items-center gap-4 shrink-0">
-          <span className="text-2xl font-serif font-bold tracking-tight text-emerald-800">
-            PrivaSync
-          </span>
-          <Separator orientation="vertical" className="h-6" />
-          <input
-            type="text"
-            value={docTitle}
-            onChange={(e) => setDocTitle(e.target.value)}
-            className="text-base font-medium text-slate-600 bg-transparent border border-transparent hover:border-slate-300 focus:border-emerald-500 focus:bg-white rounded px-2 py-0.5 outline-none transition-all w-52"
-            placeholder="Untitled Document"
-          />
-        </div>
-
-        <div className="flex-1 flex items-center justify-center border-2 border-dashed border-slate-200 rounded-lg h-10 text-slate-400 text-sm">
-          Navbar
-        </div>
-      </header>
+     
 
       <div className="flex flex-1 overflow-hidden">
 
@@ -348,7 +329,9 @@ export default function LandingEditorPage() {
             <FileText className="w-4 h-4 text-slate-400 shrink-0" />
             <span className="truncate text-sm">{docTitle || 'Untitled Document'}</span>
           </Button>
+          {/* FIX ? better to use other type of navigation insted of <a></a>  */}
           <Button variant="ghost" className="w-full justify-start gap-2 text-slate-500 h-9">
+            <a href="/user/training" className="text-sm">
             <History className="w-4 h-4 shrink-0" />
             <span className="text-sm">Training Logs</span>
           </Button>

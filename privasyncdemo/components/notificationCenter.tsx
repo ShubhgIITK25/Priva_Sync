@@ -102,7 +102,7 @@ export default function NotificationCenter() {
         {notifications.length === 0 ? (
           <div className="flex flex-col items-center justify-center gap-2 py-16 text-gray-400">
             <Bell size={28} />
-            <p className="text-sm">You're all caught up</p>
+            <p className="text-sm">You&apos;re all caught up</p>
           </div>
         ) : (
           notifications.map((n) => (
